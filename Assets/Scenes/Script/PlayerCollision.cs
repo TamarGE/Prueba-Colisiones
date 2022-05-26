@@ -17,9 +17,10 @@ public class PlayerCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "DeathWall")
+        if (col.gameObject.name == "DeathWall" || col.gameObject.name == "DeathPlane")
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            transform.position = new Vector3 (2, 2, 2);
         }  
     }
 }
